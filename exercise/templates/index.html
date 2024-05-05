@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercise</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="centered">
+        <a href="{% url 'signup' %}" class="btn">Signup</a>
+        <a href="{% url 'login' %}" class="btn">Login</a>
+        <a href="http://127.0.0.1:8000/admin" class="btn">Admin</a>
+    </div>
+    <div class="msg">
+        <div class="left-image">
+            <img src="{% static 'images/w.jpg' %}" alt="Exercise Image" class="circle-img" />
+        </div>
+        <p>
+            "Welcome to <em style="color: blue;">EXERCISE WITH US, </em>our platform dedicated to promoting physical activity for
+            enhanced fitness and well-being! At its core, physical activity isn't
+            just about staying active; it's about nurturing a healthier lifestyle
+            and achieving overall well-being. Regular physical activity has a
+            profound impact on our bodies and minds. It strengthens muscles,
+            improves cardiovascular health, boosts energy levels, and enhances
+            flexibility and balance. Beyond the physical benefits, staying active
+            also plays a crucial role in reducing stress, improving mood, and
+            enhancing mental clarity. Our mission is to inspire and empower you to
+            make physical activity a part of your daily routine. Whether it's
+            through engaging workouts, helpful tips, or personalized fitness plans,
+            we're here to support you on your journey to a healthier and happier
+            life. Join us in embracing the transformative power of physical activity
+            and unlock your full potential for wellness and vitality!"
+        </p>
+
+    </div>
+    <div class="centered">
+        <a href="{% url 'signup' %}" class="btn">Signup</a>
+        <a href="{% url 'login' %}" class="btn">Login</a>
+        <a href="http://127.0.0.1:8000/admin" class="btn">Admin</a>
+    </div>
+</body>
+</html>

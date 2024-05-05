@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style4.css' %}">
+    <style>
+
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .contact-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .contact-item img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 50%;
+        }
+        /* Center the navbar */
+        .navbar {
+            text-align: center;
+            background-color: rgb(167, 164, 164);
+            display: block;
+            size-adjust:inherit;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+        .navbar li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: black;
+        }
+        .navbar a:hover {
+            color: blue;
+        }
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .contact-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .contact-item {
+            width: calc(50% - 10px); /* Adjust as needed for spacing */
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .contact-item img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="{% url 'fitness_programs' %}">Explore Fitness Programs</a></li>
+            <li><a href="{% url 'display_videos' %}">Watch Exercise Videos for MUBS GYM</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p class="location" style="color: red; font-size: 18px;" >We are located around Makerere University Business School (MUBS) Nakawa.</p>
+        <p class="encouragement">Feel free to reach out to us!</p>
+        <!-- Contact items here -->
+    </div>
+    
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="contact-items">
+            <div class="contact-item">
+                <img src="{% static 'images/e.jpg' %}" alt="Namatovu Irene">
+                <h2>Namatovu Irene</h2>
+                <p style="color: blue;">Email: namatovu.irene@example.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+            <div class="contact-item">
+                <img src="{% static 'images/a.jpg' %}" alt="Barigye Ronald">
+                <h2>Barigye Ronald</h2>
+                <p style="color: blue;">Email: barigye.ronald@example.com</p>
+                <p>Phone: +1 345 678 901</p><!-- change to own phone contacts -->
+            </div>
+            <div class="contact-item">
+                <img src="{% static 'images/b.jpg' %}" alt="Lusiba Talib">
+                <h2>Lusiba Talib</h2>
+                <p style="color: blue;">Email: lusiba.talib@example.com</p>
+                <p>Phone: +1 456 789 012</p>
+            </div>
+            <div class="contact-item">
+                <img src="{% static 'images/c.jpg' %}" alt="Okidi John Bosco">
+                <h2>Okidi John Bosco</h2>
+                <p style="color: blue;">Email: okidi.john@example.com</p>
+                <p>Phone: +1 567 890 123</p>
+            </div>
+            <div class="contact-item" style="display: contents;">
+                <img src="{% static 'images/d.jpg' %}" alt="Nkajja Shafic">
+                <h2 style="color: red;">Nkajja Shafic</h2>
+                <p style="color: blue;" style="color: blue;">Email: nkajja.shafic@example.com</p>
+                <p>Phone: +1 678 901 234</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+ 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>videos</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style3.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+          <li>
+            <a href="{% url 'fitness_programs' %}">Explore Fitness Programs</a>
+          </li>
+          <li ><a href="{% url 'display_videos' %}">Watch Exercise Videos for MUBS GYM</a></li >
+            <li ><a href="{% url 'home' %}">home</a></li >
+              <li ><a href="{% url 'contact_us' %}">Contact Us</a></li>
+        </ul>
+      </nav>
+
+    <h1>Watch MUBS GYM Exercise Videos</h1>
+    <div class="program-item">
+        <h2>I DISPLAY A SIMPLE VIDEO</h2>
+        <img src="{% static 'images/a.jpg' %}" alt="Cardio Blast"><!-- you can change your image here -->
+        <h1 style="color: red;">By Mubs Gym</h1><!-- put you own wording -->
+        <p><strong>Duration:</strong> Daily</p>
+        <div class="program-video">
+            <video width="560" height="315" controls>
+                <source src="{% static 'vids/a.mp4' %}" type="video/mp4"><!-- upload own video -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+</body>
+</html>

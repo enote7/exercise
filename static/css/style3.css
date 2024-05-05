@@ -1,0 +1,89 @@
+/* CSS styles for style3.css */
+body {
+    background-color: #eceaea;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.program-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.program-item {
+    width: 48%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.program-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.program-video {
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+.navbar {
+    background-color: #d0dfee; /* Light background color */
+    padding: 10px 0; /* Padding for top and bottom */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for a subtle effect */
+    color: blue;
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center-align the navbar items */
+}
+
+.navbar li {
+    display: inline-block; /* Display items horizontally */
+    margin-right: 20px; /* Margin between items */
+    color: blue;
+}
+
+.navbar li:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+    color: blue;
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Text color */
+    font-weight: 500; /* Medium font weight */
+    font-size: 16px; /* Font size */
+}
+
+.navbar a:hover {
+    color: #ff0000; /* Change color on hover */
+}

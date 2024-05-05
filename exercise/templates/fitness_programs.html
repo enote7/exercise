@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Programs</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style3.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+          <li>
+            <a href="{% url 'fitness_programs' %}">Explore Fitness Programs</a>
+          </li>
+          <li ><a href="{% url 'display_videos' %}">Watch Exercise Videos for MUBS GYM</a></li >
+          <li ><a href="{% url 'home' %}">home</a></li >
+          <li ><a href="{% url 'contact_us' %}">Contact Us</a></li>
+        </ul>
+      </nav>
+  
+    <div class="container">
+        <h1 style="color: red;">Fitness Programs</h1>
+        <p>Explore our diverse range of fitness programs tailored to your needs.</p>
+        <div class="program-list">
+            <div class="program-item">
+                <h2 style="color: blue; ">Strength Training</h2>
+                <img src="https://lh4.googleusercontent.com/proxy/7ZA43Gj0tYhsE83cgYkbuBEC0YLLJacJTPKVUiTQxiw39S3J1Q9AJzzinzeYEgeY5XRGqvGNPS4QdHorLl33M1bYwn3EevyBMq6dQlxQiqjMva4t1kz25Obax1UwJGmBfQ" alt="Strength Training">
+                <p style="color: blue; ">Build muscle and improve strength with our intensive strength training program.</p>
+                <p style="color: red; "><strong>Duration:</strong> 8 weeks</p>
+                <div class="program-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eTxO5ZMxcsc" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <a href="https://www.youtube.com/watch?v=eTxO5ZMxcsc&pp=ygUdc3RyZW5ndGggdHJhaW5pbmcgbXVzY2xlICBtZW4%3D" class="btn">View Details</a>
+            </div>
+
+            <div class="program-item">
+                <h2 style="color: blue; ">Cardio Blast</h2>
+                <img src="{% static 'images/e.jpg' %}" alt="Cardio Blast">
+                <p style="color: blue; ">Get your heart pumping and burn calories with our high-intensity cardio blast program.</p>
+                <p style="color: red; "><strong>Duration:</strong> 6 weeks</p>
+                <div class="program-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZllXIKITzfg" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="program-item">
+                <h2 style="color: blue; ">Yoga for Relaxation</h2>
+                <img src="https://lh6.googleusercontent.com/proxy/u53RK2HfNA6s3tt2DxwtACSC4mGASCadmskOSZY8Aw_g77HtUeZ3ja1LL4ltUqh2gEZFo3GNUOOWee_8jgS9ktO4UgimgCc-4CC8xRr4YaVN9deQeRoP5HQT46w1-eXnPkA" alt="Yoga for Relaxation">
+                <p style="color: blue; ">Unwind and improve flexibility with our calming yoga for relaxation program.</p>
+                <p style="color: red; "><strong>Duration:</strong> 4 weeks</p>
+                <div class="program-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9MazN_6wdqI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <a href="https://www.youtube.com/watch?v=9MazN_6wdqI&pp=ygUTWW9nYSBmb3IgUmVsYXhhdGlvbg%3D%3D" class="btn">View Details</a>
+            </div>
+
+            <div class="program-item">
+                <h2 style="color: blue; ">Yoga for Relaxation</h2>
+                <img src="{% static 'images/rope.jpg' %}">
+                <p style="color: blue; ">Unwind and improve flexibility with our calming yoga for relaxation program.</p>
+                <p style="color: red; "><strong>Duration:</strong> 4 weeks</p>
+                <div class="program-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iI1F14fYS68" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <a href="https://www.youtube.com/watch?v=iI1F14fYS68&pp=ygUdcm9wZSBza2lwcGluZyBmb3Igd2VpZ2h0IGxvc3M%3D" class="btn">View Details</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

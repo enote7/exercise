@@ -1,0 +1,37 @@
+/* Add your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Center the content */
+}
+
+.contact-item {
+    margin-bottom: 40px; /* Increased margin for better spacing */
+    padding-bottom: 20px; /* Increased padding for better spacing */
+    border-bottom: 2px solid #ccc; /* Thicker border bottom */
+}
+
+.contact-item img {
+    max-width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.location {
+    font-style: italic;
+    color: #7e7c7c;
+    margin-bottom: 20px;
+}
+
+.encouragement {
+    font-weight: bold;
+    color: #009900; /* Green color for encouragement message */
+    margin-bottom: 40px; /* Increased margin for better spacing */
+}

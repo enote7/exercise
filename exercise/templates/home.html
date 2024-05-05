@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style1.css' %}"
+    />
+    <style>
+      /* CSS styles for the table-like format */
+      .testimonial-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .testimonial-item {
+        width: 48%;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      .testimonial-pic {
+        width: 20%;
+        border-radius: 50%;
+      }
+
+      .username {
+        font-weight: bold;
+      }
+
+      .feedback {
+        margin-top: 10px;
+      }
+
+      /* CSS styles for the table-like format */
+      .tips-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      .tips-table th,
+      .tips-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      .tips-table th {
+        background-color: #f2f2f2;
+      }
+
+      .tips-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .tips-table tr:hover {
+        background-color: #f2f2f2;
+      }
+
+      /* Styles for circular and smaller images */
+      .small-image {
+        width: 300px; /* Adjust the size as needed */
+        height: 100px;
+        border-radius: 50%; /* Makes the image circular */
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a href="{% url 'fitness_programs' %}">Explore Fitness Programs</a>
+        </li>
+        <li><a href="{% url 'display_videos' %}">Watch Exercise Videos for MUBS GYM</a></li>
+        <li ><a href="{% url 'home' %}">home</a></li >
+          <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="welcome-container">
+      <div class="user-profile">
+        {% if user.profile_picture %}
+        <img
+          src="{{ user.profile_picture.url }}"
+          alt="Profile Picture"
+          class="profile-pic"
+        />
+        {% else %}
+        <img
+          src="default_profile_picture.png"
+          alt="Default Profile Picture"
+          class="profile-pic"
+        />
+        {% endif %}
+        <h2>
+          Welcome, {{ user.username }}<br />
+          To Your Fitness Hub
+        </h2>
+      </div>
+    </div>
+
+    <h1 style="text-align: center; color: rgb(255, 0, 0)">
+      Empowering you to achieve your fitness goals!
+    </h1>
+
+    <!-- Content about Foods, Water, and Others -->
+    <section class="container">
+      <h2 style="color: rgb(255, 0, 98); text-align: center">
+        Healthy Eating Tips
+      </h2>
+      <br /><br /><br />
+      <table class="tips-table">
+        <tr>
+          <th style="color: rgb(255, 0, 0); font-size: 24px">Tip</th>
+          <th style="color: red; font-size: 24px">Description</th>
+        </tr>
+        <tr>
+          <td style="color: blue; font-size: 24px">
+            Eat plenty of fruits and vegetables for vitamins and minerals.
+          </td>
+          <td>
+            <img
+              src="{% static 'images/fruits.jpg' %}"
+              alt="a basket of fruits"
+              class="small-image"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td style="color: blue; font-size: 24px">
+            Include whole grains for fiber and sustained energy.
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="color: blue; font-size: 24px">
+            Consume lean proteins such as fish, chicken, and legumes.
+          </td>
+          <td>
+            <img
+              src="{% static 'images/ff.jpg' %}"
+              alt="fried fish"
+              class="small-image"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td style="color: blue; font-size: 24px">
+            Stay hydrated by drinking at least 8 glasses of water daily.
+          </td>
+          <td>
+            <img
+              src="{% static 'images/water.jpg' %}"
+              alt="water"
+              class="small-image"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td style="color: blue; font-size: 24px">
+            Limit processed foods and sugary drinks.
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="color: blue; font-size: 24px">
+            Practice mindful eating and listen to your body's hunger cues.
+          </td>
+          <td>
+            <img
+              src="{% static 'images/h.png' %}"
+              alt="hungry toon"
+              class="small-image"
+            />
+          </td>
+        </tr>
+      </table>
+    </section>
+    <div class="program-item">
+      <h2>Cardio Blast</h2>
+      <p style="color: rgb(255, 0, 43); font-size: 24px">
+        Get your heart pumping and burn calories with our high-intensity cardio
+        blast program.
+      </p>
+      <p><strong>Duration:</strong> 6 weeks</p>
+      <div class="program-video">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/ZllXIKITzfg"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <main><br><br>
+    <!-- Testimonials or Success Stories Section -->
+    <h2 style="color: rgb(3, 88, 53); font-size: 24px; text-align: center;">Testimonials or Success Stories</h2>
+    <section class="testimonial-container">
+        {% for testimonial in testimonials %}
+        <div class="testimonial-item">
+            <img src="{{ testimonial.user.profile_picture.url }}" alt="Profile Picture" class="testimonial-pic">
+            <p class="username">{{ testimonial.user }}</p>
+            <p class="feedback">{{ testimonial.feedback }}</p>
+        </div>
+        {% endfor %}
+    </section>
+<br><br>
+<h1 style="color: rgb(3, 88, 53); font-size: 24px; text-align: center;">Share Your Success Story</h1>
+        <form action="{% url 'home' %}" method="post">
+          {% csrf_token %}
+          <label for="feedback" style=" font-size: 24px;">Share Your Success Story:</label><br />
+          <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+          <br />
+          <button type="submit" style="font-size: 20px;">Post</button>
+        </form>
+      </section>
+    </main>
+    <!-- Add this script for the web popup -->
+    <script>
+      document
+        .getElementById("feedback-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+          // Show a web popup message
+          alert(
+            "Feedback successfully submitted! Thank you for sharing your success story."
+          );
+          // You can also customize the popup appearance using libraries like SweetAlert
+        });
+    </script>
+  </body>
+</html>
